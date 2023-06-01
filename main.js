@@ -10,9 +10,14 @@ fetch(apiUrl)
 	.then(response => response.json())
 	.then(data => {
 		console.log(data);
+		// Get the current date and time
+	const date = new Date();
+	// Format the date and time as a string
+	const dateTimeString = date.toLocaleString();
 		// Update the HTML with the weather information
 		weatherInfo.innerHTML = `
-			<p><strong>Time:</strong> ${data.time}</p>
+		${data.name}		
+			<p><strong>Date and Time:</strong> ${dateTimeString}</p> 			<p><strong>Temperature:</strong>
 			<p><strong>City:</strong> ${data.name}</p>
 			<p><strong>Temperature:</strong> ${(data.main.temp - 273.15).toFixed(1)} &deg;C</p>
 			<p><strong>Humidity:</strong> ${data.main.humidity}%</p>
@@ -21,3 +26,16 @@ fetch(apiUrl)
 		`;
 	})
 	.catch(error => console.error('Error fetching weather data:', error));
+
+
+	function updateTime() {
+		const date = new Date();
+		const hours = date.getHours();
+		const minutes = date.getMinutes();
+		const seconds = date.getSeconds();
+		const time = `${hours}:${minutes}:${seconds}`;
+		document.getElementById("time").innerHTML = time;
+	  }
+	  
+	  setInterval(updateTime, 1000);
+	
