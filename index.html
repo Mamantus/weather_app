@@ -4,14 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WeatherNow</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 <body>
+
+    
+    
     <div class="container">
-		<h1>Current Weather</h1>
-		<div class="weather-info"></div>
+
+        <div class="search-container">
+            <div class="search">
+                <input type="text" placeholder="Search your city" spellcheck="false">
+                <button class="searchBtn"><img src="/Images/search.png" width="10px" alt=""></button>
+            </div>
+        </div>
+
+        <div class="title">
+            <h1>WeatherNow</h1>
+            <i class="fa-solid fa-sun fa-2xl"></i>
+        </div>
+		<div class="weather-info">
+            <div class="city">Land</div>
+            <div class="weather">Väderlek</div>
+            <div class="temp">Temperatur</div>
+            <div class="sub-info">
+                <div class="humidity">Luftfuktighet</div>
+                <div class="pressure">Lufttryck</div>
+                <div class="wind">Vind</div>
+            </div>
+            
+        </div>
 	</div>
-    <script src="main.js"></script>
+
+    <script src="main.js">
+        
+    </script>
 </body>
 </html>
