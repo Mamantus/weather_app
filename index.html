@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
-<body>
-
-    
-    
+<body>   
     <div class="container">
 
         <div class="search-container">
@@ -21,25 +18,31 @@
             </div>
         </div>
 
-        <div class="title">
+        <div class="header-container">
             <h1>WeatherNow</h1>
             <i class="fa-solid fa-sun fa-2xl"></i>
-        </div>
-		<div class="weather-info">
-            <div class="city">Land</div>
-            <div class="weather">Väderlek</div>
-            <div class="temp">Temperatur</div>
-            <div class="sub-info">
-                <div class="humidity">Luftfuktighet</div>
-                <div class="pressure">Lufttryck</div>
-                <div class="wind">Vind</div>
+
+            <div class="time-container">
+                <h3 id="current-time">12:00</h3>
+                <h4 id="current-date">May</h4>
             </div>
-            
+        </div>
+
+		<div class="weather-info">
+            <div class="city">City</div>
+            <div class="weather">Weather</div>
+            <div class="temp">Temperature</div>
+            <div class="sub-info">
+                <div class="humidity">Humidity</div>
+                <div class="pressure">Pressure</div>
+                <div class="wind">Wind</div>
+            </div>
         </div>
 	</div>
 
-    <script src="main.js">
-        
-    </script>
+    <script src="main.js"></script>
+
+    <script src="time.js"></script>
+
 </body>
 </html>
