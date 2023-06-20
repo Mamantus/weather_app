@@ -18,6 +18,10 @@
 			document.querySelector(".wind").innerHTML = "Vindhastighet: " + data.wind.speed + " m/s"
 		}
 
+		setInterval(() => {
+			checkWeather("yourCity");
+			}, 1000 * 60 * 30); // 1000 milliseconds * 60 seconds * 30 minutes = 1800000 milliseconds
+
 	searchBtn.addEventListener("click", ()=> {
 		checkWeather(searchBox.value);
 	})	
